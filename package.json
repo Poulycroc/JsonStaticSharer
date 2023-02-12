@@ -4,9 +4,20 @@
         "dev": "vite",
         "build": "vite build && vite build --ssr"
     },
+    "dependencies": {
+        "@mdi/js": "^7.1.96",
+        "@poulycroc/js-utils": "https://github.com/Poulycroc/poulycroc-utils.git",
+        "@poulycroc/sass-tools": "https://github.com/Poulycroc/sass-tools.git",
+        "@poulycroc/vue-props-mapper": "https://github.com/Poulycroc/vue-props-mapper.git",
+        "@poulycroc/vue-store-maker": "https://github.com/Poulycroc/vue-store-maker.git",
+        "chart.js": "^4.2.0",
+        "numeral": "^2.0.6",
+        "pinia": "^2.0.30"
+    },
     "devDependencies": {
         "@inertiajs/vue3": "^1.0.0",
         "@tailwindcss/forms": "^0.5.3",
+        "@tailwindcss/line-clamp": "^0.4.0",
         "@vitejs/plugin-vue": "^4.0.0",
         "@vue/server-renderer": "^3.2.31",
         "autoprefixer": "^10.4.12",
