@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SubscriptionController;
+
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -37,6 +39,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
+
+    Route::get('/subscription/create', ['as'=>'home','uses'=>'SubscriptionController@index'])->name('subscription.create');
+    Route::post('order-post', ['as'=>'order-post','uses'=>'SubscriptionController@orderPost']);
 });
 
 require __DIR__.'/auth.php';
